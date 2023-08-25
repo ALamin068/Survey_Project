@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.surveyclientserver.ClientController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="welcomeText" text="Data Communications Poll Questions">
+        <font>
+            <Font name="Times New Roman Bold" size="16.0" />
+        </font></Label>
+    <Label fx:id="username" text="Please enter your username" />
+    <TextField fx:id="txtUsername" />
+    <HBox spacing="20.0">
+    	<Button fx:id="connectBtn" onAction="#connectClick" text="Connect to Server"
+                style="-fx-padding: 10;
+                -fx-text-fill: white;
+    -fx-background-color: #4CAF50;" />
+        <Button fx:id="startBtn" onAction="#startClick"
+                text="Request the survey" style="-fx-padding: 10;
+                -fx-text-fill: white;
+    -fx-background-color: #008CBA;"/>
+        <Button fx:id="quitButton" onAction="#quitSurvey" text="Quit"
+                style="-fx-padding: 10;
+                -fx-text-fill: white;
+    -fx-background-color: #f44336;"/>
+    </HBox>
+    <TextArea fx:id="txtQuestion" visible="false"/>
+    <RadioButton fx:id="rb1" visible="false" />
+    <RadioButton fx:id="rb2" visible="false" />
+    <RadioButton fx:id="rb3" visible="false" />
+    <RadioButton fx:id="rb4" visible="false" />
+    <RadioButton fx:id="rb5" visible="false" />
+    <Button fx:id="nextQuestion" onAction="#seeNext" text="Next question" visible="false" style="-fx-padding: 10;
+    -fx-text-fill: white;
+    -fx-background-color: #008CBA;" />
+
+</VBox>

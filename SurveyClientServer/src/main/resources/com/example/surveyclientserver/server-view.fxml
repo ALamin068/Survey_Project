@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.surveyclientserver.ServerController">
+ 
+        
+    	<padding>
+        	<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    	</padding>
+    
+
+    <Label fx:id="welcomeText" text="Data Communications Poll Questions - Server">
+        <font>
+            <Font name="System Bold" size="16.0" />
+        </font></Label>
+
+    <TabPane
+            tabClosingPolicy="UNAVAILABLE"
+            fx:id="tabPane">
+        <tabs>
+            <Tab text="Server">
+                <content>
+                    <VBox  spacing="20.0">
+                        <padding>
+                            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                        </padding>
+                        <Button fx:id="startServer" onAction="#startServer"
+                                text="Start Server" visible="true"
+                                style="-fx-padding: 10;
+                                -fx-text-fill: white;
+    -fx-background-color: #4CAF50;"/>
+                        <ListView fx:id="serverListView" editable="false">
+                        </ListView>
+                    </VBox>
+
+                </content>
+            </Tab>
+            <Tab text="Survey">
+                <content>
+                    <VBox  spacing="20.0">
+                        <padding>
+                            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                        </padding>
+                        <HBox>
+                            <Label fx:id="question" text="Question: " />
+                            <TextField fx:id="txtQuestion" />
+                        </HBox>
+                        <HBox>
+                            <Label fx:id="option1" text="Option 1: " />
+                            <TextField fx:id="txtOption1" />
+                        </HBox>
+                        <HBox>
+                            <Label fx:id="option2" text="Option 2: " />
+                            <TextField fx:id="txtOption2" />
+                        </HBox>
+                        <HBox>
+                            <Label fx:id="option3" text="Option 3: " />
+                            <TextField fx:id="txtOption3" />
+                        </HBox>
+                        <HBox>
+                            <Label fx:id="option4" text="Option 4: " />
+                            <TextField fx:id="txtOption4" />
+                        </HBox>
+
+                        <Button fx:id="btnAddQuestion" onAction="#addQuestion" text="Add Question"  
+                        style="-fx-padding: 10;
+                                -fx-text-fill: white;
+    -fx-background-color: #4CAF50;" />
+                    </VBox>
+
+                </content>
+            </Tab>
+        </tabs>
+    </TabPane>
+
+
+</VBox>
